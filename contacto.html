@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Contacto / Soporte</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sistema Inventario</h1>
+        <p class="small">Contacto y soporte</p>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos-listado.html">Productos</a>
+        <a href="productos-alta.html">Alta</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="contact-title">
+        <div class="page-title">
+          <h2 id="contact-title">Contacto / Soporte</h2>
+          <p>Envíanos tus consultas, sugerencias o reportes de error 67.</p>
+        </div>
+
+        <form action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="c-name">Nombre</label>
+            <input id="c-name" name="name" type="text" minlength="3" required>
+          </div>
+
+          <div class="form-group">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" placeholder="tu@correo.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="c-subject">Asunto</label>
+            <select id="c-subject" name="subject" required>
+              <option value="">-- Seleccionar --</option>
+              <option>Consulta</option>
+              <option>Sugerencia</option>
+              <option>Error</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Mensaje</label>
+            <textarea id="c-message" name="message" rows="6" minlength="12" placeholder="Describe tu consulta..." required></textarea>
+            <small class="small">Mínimo 12 caracteres.</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enviar mensaje</button>
+            <button type="reset" class="btn ghost">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="card sidebar" aria-label="Soporte">
+        <div>
+          <h4 class="small">Soporte</h4>
+          <p class="small">Mail: alejo.gael.molina.07@gmail.com </p>
+          <p class="small">Horarios: 10 am a 13 pm y de 14 pm a 21 pm</p>
+          <p class="small">Respuesta estimada: 48–72 horas (simulado).</p>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer small">TP9 alejo molina 6G</div>
+  </div>
+</body>
+</html>

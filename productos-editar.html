@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Editar Producto</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sistema Inventario</h1>
+        <p class="small">Edición de producto</p>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos-listado.html">Listado</a>
+        <a href="productos-alta.html">Alta</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="edit-title">
+        <div class="page-title">
+          <h2 id="edit-title">Editar producto</h2>
+          
+        </div>
+
+        <form action="#" method="post" novalidate>
+          <!-- ID interno: readonly (se envía) -->
+          <div class="form-group">
+            <label for="id">ID interno</label>
+            <input id="id" name="id" type="text" value="PROD-000123" readonly>
+            
+          </div>
+
+          <!-- SKU: ejemplo disabled (no se envía) -->
+          <div class="form-group">
+            <label for="sku_edit">SKU (bloqueado por rol)</label>
+            <input id="sku_edit" name="sku_edit" type="text" value="ABC-123" disabled>
+           
+          </div>
+
+          <div class="form-group">
+            <label for="name_edit">Nombre</label>
+            <input id="name_edit" name="name" type="text" value="Ejemplo Producto" required>
+          </div>
+
+          <div class="form-group">
+            <label for="price_edit">Precio</label>
+            <input id="price_edit" name="price_edit" type="number" min="0" step="0.01" value="1999.99" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Guardar cambios</button>
+            <button type="reset" class="btn ghost">Reset</button>
+            <button type="button" class="btn warn" onclick="if(confirm('¿Eliminar producto?')) alert('Simulado: producto eliminado')">Eliminar</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="card sidebar" aria-label="Registro">
+        <div>
+          <h4 class="small">Registro de cambios</h4>
+          <p class="small">Última edición: 2025-10-04 por alejo molina</p>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer small">TP9 alejo molina 6G</div>
+  </div>
+</body>
+</html>

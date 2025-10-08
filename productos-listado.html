@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Listado de Productos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sistema Inventario</h1>
+        <p class="small">Listado</p>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos-alta.html">Alta</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="list-title">
+        <div class="page-title">
+          <h2 id="list-title">Listado de productos</h2>
+        </div>
+
+        <form action="#" method="get" aria-label="Filtros">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+            <input type="text" name="q" placeholder="Buscar por nombre o SKU" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(15,23,36,0.06)">
+            <select name="category" style="padding:10px;border-radius:10px">
+              <option value="">Todas las categorías</option>
+              <option>Electrónica</option>
+              <option>Alimentos</option>
+            </select>
+            <select name="status" style="padding:10px;border-radius:10px">
+              <option value="">Todos</option>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+            <button class="btn primary" type="submit">Filtrar</button>
+          </div>
+        </form>
+
+        <table class="table" aria-describedby="list-title">
+          <thead>
+            <tr>
+              <th>SKU</th><th>Nombre</th><th>Categoría</th><th>Stock</th><th>Stock mín.</th><th>Precio</th><th>Estado</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ABC-001</td><td>Mouse inalámbrico</td><td>Electrónica</td><td>85</td><td>10</td><td>$1,299.00</td><td>Activo</td>
+              <td><a class="btn" href="productos-editar.html">Editar</a></td>
+            </tr>
+            <tr>
+              <td>FOOD-12</td><td>Mermelada casera</td><td>Alimentos</td><td>12</td><td>5</td><td>$450.00</td><td>Activo</td>
+              <td><a class="btn" href="productos-editar.html">Editar</a></td>
+            </tr>
+            <tr>
+              <td>OFF-77</td><td>Carpeta A4</td><td>Oficina</td><td>0</td><td>2</td><td>$150.00</td><td>Inactivo</td>
+              <td><a class="btn" href="productos-editar.html">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="small note">la tabla es estatica y no sive</p>
+      </section>
+
+      <aside class="card sidebar" aria-label="Indicadores">
+        <div class="kpi">
+          <div>
+            <strong>Stock crítico</strong>
+            <span>3 items</span>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <h4 class="small">Exportar</h4>
+          <p class="small">boton de simulacion.</p>
+          <button class="btn ghost" onclick="alert('Simulado: exportar listado')">Exportar listado</button>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer small">TP9 alejo molina 6G</div>
+  </div>
+</body>
+</html>
